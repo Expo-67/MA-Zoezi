@@ -11,6 +11,7 @@ Features of the app
 5. User can view their workout history
 6. User can view their progress (weight lifted, reps, sets)
 7. User can view their workout plan for the duration set.
+8. AI API to help clients, if  a client finds an exercise too easy or difficult, AI can adjust the intensity, sets, and reps.
 </p>
 
 // **_Technical Requirements_**//<br/>
