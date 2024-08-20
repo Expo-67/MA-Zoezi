@@ -1,0 +1,15 @@
+{
+  "name": "ma-zoezi",
+  "version": "1.0.0",
+  "description": "//**_Requirements and planning_**//<br/>\r <ins>Project Name:MA-Zoezi</ins><br/>\r Ma-zoezi is a workout generator software that allows users to customize their routines based on their preferred duration and target muscle groups. Targeted audience will be people who exercise (crossfit, hypertrophy)<br/>\r MA-Zoezi will be a web application.<br/>\r Features of the app",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./public/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.10"
+  }
+}
