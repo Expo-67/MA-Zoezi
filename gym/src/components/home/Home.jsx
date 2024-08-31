@@ -3,17 +3,16 @@ import "./home.css";
 
 const Home = () => {
   return (
-    <div>
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4">Effective Exercise Programs for All</h1>
-          <p class="lead">
-            Personalized fitness plans designed to meet your unique goals,
-            ensuring consistent progress and maximum results, no matter your
-            starting point.
-          </p>
-        </div>
-      </div>
+    <div className="  container home p-4 my-2  rounded-3">
+      <h1 className="display-5">Tailored Workouts</h1>
+      <p className="col-md-8">
+        MaZoezi is designed to deliver personalized workout plans that evolve
+        with your goals and progress. Whether you're a beginner or an
+        experienced athlete, the app customizes routines based on your fitness
+        level, preferences, and available time. With a focus on variety and
+        adaptability,
+      </p>
+      <button className=" btn btn-dark btn-lg"> Get Started</button>
     </div>
   );
 };

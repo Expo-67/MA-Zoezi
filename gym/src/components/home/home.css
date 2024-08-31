@@ -1,0 +1,6 @@
+.home {
+  background-image: url("/src/assets/back\ 3.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 75vh;
+}
