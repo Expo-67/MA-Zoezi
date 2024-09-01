@@ -5,6 +5,7 @@ import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import About from "./components/about/About";
 import Comments from "./components/comments/Comments";
+import Contact from "./components/contact/Contact";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,6 +16,7 @@ function App() {
       <Home />
       <About />
       <Comments />
+      <Contact />
     </div>
   );
 }
