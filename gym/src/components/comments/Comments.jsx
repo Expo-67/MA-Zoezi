@@ -6,7 +6,7 @@ import Card from "react-bootstrap/Card";
 const Comments = () => {
   return (
     <div className="card_container">
-      <Card style={{ width: "16rem" }}>
+      <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Body>
           <Card.Title>Body Building</Card.Title>
@@ -17,7 +17,7 @@ const Comments = () => {
           <Button variant="dark">Begin</Button>
         </Card.Body>
       </Card>
-      <Card style={{ width: "16rem" }}>
+      <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Body>
           <Card.Title>Crossfit</Card.Title>
@@ -28,7 +28,7 @@ const Comments = () => {
           <Button variant="dark">Begin</Button>
         </Card.Body>
       </Card>
-      <Card style={{ width: "16rem" }}>
+      <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Body>
           <Card.Title>Powerlift</Card.Title>

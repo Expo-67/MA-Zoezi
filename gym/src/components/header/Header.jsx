@@ -19,6 +19,7 @@ const header = () => {
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#about">About</Nav.Link>
               <Nav.Link href="#contact">Contact</Nav.Link>
+              <Nav.Link href="#getstarted">Get Started</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
