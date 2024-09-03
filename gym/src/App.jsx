@@ -7,6 +7,7 @@ import About from "./components/about/About";
 import Comments from "./components/comments/Comments";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
+import Register from "./components/Register/Register";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,10 +16,10 @@ function App() {
     <div>
       <Header />
       <Home />
-      <About />
       <Comments />
       <Contact />
       <Footer />
+      <Register />
     </div>
   );
 }
