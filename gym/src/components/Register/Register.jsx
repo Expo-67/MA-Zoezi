@@ -1,6 +1,10 @@
 import React from "react";
 import "./Register.css";
 import pullups from "../Register/images/pullups.jpg";
+import { NavLink } from "react-router-dom";
+const NavBar = () => {
+  return <NavLink to="/">Home</NavLink>;
+};
 
 const Register = () => {
   return (
