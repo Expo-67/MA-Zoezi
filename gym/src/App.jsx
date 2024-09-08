@@ -9,6 +9,7 @@ import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import Register from "./components/Register/Register";
 import Booking from "./components/booking/Booking";
+import Dashboard from "./components/dashboard/Userdashboard";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -22,6 +23,7 @@ function App() {
       <Footer />
       <Register />
       <Booking />
+      <Dashboard />
     </div>
   );
 }
