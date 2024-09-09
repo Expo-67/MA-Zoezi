@@ -12,7 +12,7 @@ import { Chart } from "react-chartjs-2";
 import "chart.js/auto";
 import "./dashboard.css";
 
-const Dashboard = () => {
+const DashboardPage = () => {
   // Sample data for the chart and progress bars
   const workoutData = {
     labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
@@ -44,7 +44,7 @@ const Dashboard = () => {
         <Col xs={12} md={3} className="bg-dark text-light sidebar p-3">
           <div className="text-center mb-4">
             <FaUserCircle size={80} />
-            <h5 className="mt-3">Hello, Mark</h5>
+            <h5 className="mt-3">Hello, Jake</h5>
           </div>
           <ul className="list-unstyled">
             <li>
@@ -97,4 +97,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export { DashboardPage };

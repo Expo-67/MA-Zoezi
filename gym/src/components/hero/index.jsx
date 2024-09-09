@@ -1,7 +1,7 @@
 import React from "react";
-import "./home.css";
+import "./hero.css";
 
-const Home = () => {
+const Hero = () => {
   return (
     <div className="  container home p-4 my-2  rounded-3">
       <h1 className="display-5">Tailored Workouts</h1>
@@ -12,9 +12,17 @@ const Home = () => {
         level, preferences, and available time. With a focus on variety and
         adaptability,
       </p>
-      <button className=" btn btn-dark btn-lg"> Get Started</button>
+      <button className="btn btn-dark btn-lg">
+        <a
+          href="/register"
+          className="text-light"
+          style={{ textDecoration: "none" }}
+        >
+          Get Started
+        </a>
+      </button>
     </div>
   );
 };
 
-export default Home;
+export default Hero;
