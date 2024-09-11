@@ -22,6 +22,7 @@ const BookingPage = () => {
                 {/* Email input */}
                 <div className="form-outline mb-4">
                   <input
+                    name="email"
                     type="email"
                     id="form1Example13"
                     className="form-control form-control-lg"
@@ -35,6 +36,7 @@ const BookingPage = () => {
                 {/* Password input */}
                 <div className="form-outline mb-4">
                   <input
+                    name="password"
                     type="password"
                     id="form1Example23"
                     className="form-control form-control-lg"
