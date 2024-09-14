@@ -25,6 +25,7 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model("User", userSchema);
 
 // Sign up route
+app.get;
 app.post("/signup", async (req, res) => {
   const { name, email, password, confirmPassword } = req.body;
   // Validation
@@ -33,7 +34,7 @@ app.post("/signup", async (req, res) => {
   }
 
   try {
-    // Hash password
+    // Hash password encryption
     const hashedPassword = await bcrypt.hash(password, 10);
     // create new user
     const newUser = new User({
@@ -49,28 +50,6 @@ app.post("/signup", async (req, res) => {
     res.status(500).json({ message: "Server error" });
   }
 });
-// Login Route
-app.post("/login", async (req, res) => {
-  const { email, password } = req.body;
-
-  if (!email || !password) {
-    return res.status(400).json({ message: "Please provide both email and password" });
-  }
-
-  try {
-    // Find user by email
-    const user = await User.findOne({ email });
-    if (!user) {
-      return res.status(404).json({ message: "User not found" });
-    }
-
-    // Check if password matches
-    const isMatch = await bcrypt.compare(password, user.password);
-    if (!isMatch) {
-      return res.status(400).json({ message: "Invalid credentials" });
-    }
-
-//Starting server
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is running on port ${process.env.PORT}`);
