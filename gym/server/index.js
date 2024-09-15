@@ -24,8 +24,17 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", userSchema);
 
+// Get all users route
+app.get("/users", async (req, res) => {
+  try {
+    const users = await User.find(); // Retrieve all users from the database
+    res.status(200).json(users); // Return the users as JSON
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Server error" });
+  }
+});
 // Sign up route
-app.get;
 app.post("/signup", async (req, res) => {
   const { name, email, password, confirmPassword } = req.body;
   // Validation
@@ -45,6 +54,34 @@ app.post("/signup", async (req, res) => {
 
     await newUser.save();
     res.status(201).json({ message: "User registered successfully" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Server error" });
+  }
+});
+// login route
+app.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+
+  if (!email || !password) {
+    return res.status(400).json({ message: "Please provide all fields" });
+  }
+
+  try {
+    // Check if the user exists in the database
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    // Compare the entered password with the hashed password
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) {
+      return res.status(400).json({ message: "Invalid credentials" });
+    }
+
+    // Successful login
+    res.status(200).json({ message: "Login successful" });
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Server error" });
