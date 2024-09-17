@@ -20,15 +20,7 @@ mongoose
 
 //Routes
 app.use("/api/signup", signup);
-app.use("/api/signup", signup);
-//User Schema and model
-const userSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  email: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
-});
-
-const User = mongoose.model("User", userSchema);
+app.use("/api/login", login);
 
 // Get all users route
 app.get("/users", async (req, res) => {
