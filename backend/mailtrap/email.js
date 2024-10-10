@@ -1,6 +1,7 @@
 import { mailtrapClient, sender } from "./mailtrap.config.js";
 import { VERIFICATION_EMAIL_TEMPLATE } from "./emailTemplate.js";
 import { response } from "express";
+import { reset } from "nodemon";
 
 export const sendVerificationEmail = async (email, verificationToken) => {
   const recipient = [{ email }];
@@ -43,3 +44,12 @@ export const sendWelcomeEmail = async (email, name) => {
     throw new Error(`Error sending welcome email: ${error}`);
   }
 };
+export const sendPasswordResetEmail = async (email, resetURL) => {
+  const recipient = [{email}]
+
+  try{
+
+  }catch(error){
+    const 
+  }
+}
