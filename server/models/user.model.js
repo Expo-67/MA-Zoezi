@@ -27,6 +27,17 @@ const userSchema = new Schema(
     resetPasswordExpiresAt: Date,
     verificationToken: String,
     verificationTokenExpiresAt: Date,
+    // Fields for workout tracking
+    profilePicture: {
+      type: String, // URL or image path
+      default: "",
+    },
+    weeklyWorkouts: [
+      {
+        type: Schema.Types.ObjectID,
+        ref: "Workout",
+      },
+    ],
   },
   { timestamps: true }
 );

@@ -1,6 +1,5 @@
 import { MailtrapClient } from "mailtrap";
 import dotenv from "dotenv";
-
 dotenv.config();
 
 export const mailtrapClient = new MailtrapClient({
@@ -10,5 +9,5 @@ export const mailtrapClient = new MailtrapClient({
 
 export const sender = {
   email: "hello@demomailtrap.com",
-  name: "James",
+  name: "Mailtrap Test",
 };
