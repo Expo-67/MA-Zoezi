@@ -1,0 +1,89 @@
+/* Global styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for layout */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styling */
+header {
+  background: rgba(74, 144, 226, 0.8);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+/* Home page background styling */
+.homepage {
+  background-image: url("https://example.com/fitness-background.jpg"); /* Add your fitness image URL here */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  color: white; /* Text color */
+}
+
+/* Form styling */
+form {
+  background: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Slightly transparent white for forms */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Buttons */
+button {
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #357ab8; /* Darker blue on hover */
+}
+
+/* Center elements */
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Exercise inputs */
+.exercise-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}

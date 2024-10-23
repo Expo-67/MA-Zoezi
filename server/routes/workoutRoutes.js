@@ -5,11 +5,12 @@ const router = express.Router();
 
 // Define a route for posting the workout of the day
 router.post("/workout-of-the-day", async (req, res) => {
-  const { workoutName, workoutDuration, exercises } = req.body;
+  const { workoutName, workoutDuration, exercises, user } = req.body;
 
   try {
-    // Create a new workout
+    // Create a new workout with the provided userId and workout details
     const newWorkout = new Workout({
+      user,
       workoutName,
       workoutDuration,
       exercises,
@@ -23,9 +24,11 @@ router.post("/workout-of-the-day", async (req, res) => {
       workout: newWorkout,
     });
   } catch (error) {
-    res
-      .status(500)
-      .json({ success: false, message: "Server error", error: error.message });
+    res.status(500).json({
+      success: false,
+      message: "Server error",
+      error: error.message,
+    });
   }
 });
 

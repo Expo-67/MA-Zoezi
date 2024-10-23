@@ -8,7 +8,7 @@ const exerciseSchema = new mongoose.Schema({
 
 const workoutSchema = new mongoose.Schema(
   {
-    userId: {
+    user: {
       // New field to associate the workout with a user
       type: mongoose.Schema.Types.ObjectId,
       required: true,

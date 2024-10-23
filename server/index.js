@@ -25,3 +25,13 @@ app.listen(PORT, () => {
   });
   console.log("Server is running on port:", PORT);
 });
+//api/workouts/workout-of-the-day
+// {
+//   "userId": "6716a366bbe757f8609d7d01",
+//   "workoutName": "Leg Day",
+//   "workoutDuration": 45,
+//   "exercises": [
+//     { "name": "Squats", "reps": 12, "sets": 4 },
+//     { "name": "Lunges", "reps": 10, "sets": 3 }
+//   ]
+// }
