@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors"; //linking frontend to backend
 import dotenv from "dotenv";
 import { connectDB } from "./db/connectDB.js";
 import authRoutes from "./routes/auth.route.js";
@@ -9,9 +10,9 @@ import progressRoutes from "./routes/progressRoutes.js"; // Import the progress 
 dotenv.config(); //Load up env files
 
 const app = express();
-const PORT = process.env.PORT || 5000;
-
+app.use(cors({ origin: "http:localhost:5173" })); // cors allows requests from frontend
 app.use(express.json()); // parse incoming request
+const PORT = process.env.PORT || 5000;
 
 //Defined routes
 app.use("/api/auth", authRoutes);
